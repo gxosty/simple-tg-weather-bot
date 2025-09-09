@@ -25,7 +25,7 @@ def main():
         app.router.add_get("/health", health)
         return app
 
-    web.run_app(create_web_app(), host="0.0.0.0", port=os.environ.get("PORT", 8008))
+    web.run_app(create_web_app(), host="0.0.0.0", port=int(os.environ.get("PORT", 8008)))
 
 
 if __name__ == "__main__":
